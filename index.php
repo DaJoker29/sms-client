@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 </head>
 <body class="container">
+    <h1>SMS <small>Because I can</small></h1>
     <form class="jumbotron form-horizontal" action="send.php" method="post">
         <div class="form-group">
             <label for="message" class="col-sm-2 control-label">Message</label>
