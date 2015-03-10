@@ -1,5 +1,10 @@
 <?php 
-    $params = $_POST;
+    $filters = array(
+        'message' => FILTER_SANITIZE_STRING,
+        'number' => FILTER_SANITIZE_NUMBER_INT
+    );
+
+    $params = filter_input_array(INPUT_POST, $filters);
     $url = 'http://textbelt.com/text';
 
     $ch = curl_init($url);

@@ -12,7 +12,7 @@
         <div class="form-group">
             <label for="number" class="col-sm-2 control-label glyphicon glyphicon-phone"><span class="sr-only">Phone Number</span></label>
             <div class="col-sm-10">
-                <input required class="form-control" name="number" type="text" placeholder="Phone Number">
+                <input required class="form-control" name="number" type="text" placeholder="XXX-XXX-XXXX (Dashes optional)">
             </div>
         </div>
 
