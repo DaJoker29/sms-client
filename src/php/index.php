@@ -10,14 +10,14 @@
     <h1>SMS <small>Because I can</small></h1>
     <form class="jumbotron form-horizontal" action="send.php" method="post">
         <div class="form-group">
-            <label for="number" class="col-sm-2 control-label">Number</label>
+            <label for="number" class="col-sm-2 control-label glyphicon glyphicon-phone"><span class="sr-only">Phone Number</span></label>
             <div class="col-sm-10">
                 <input required class="form-control" name="number" type="text" placeholder="Phone Number">
             </div>
         </div>
 
         <div class="form-group">
-            <label for="message" class="col-sm-2 control-label">Message</label>
+            <label for="message" class="col-sm-2 control-label glyphicon glyphicon-font"><span class="sr-only">Text Message</span></label>
             <div class="col-sm-10">
                 <input required class="form-control" name="message" type="text" placeholder="Text Message">
             </div>
