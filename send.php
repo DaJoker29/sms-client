@@ -15,19 +15,26 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Send</title>
+    <title>SMS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 </head>
-<body>
-<pre>
-    <?php 
-        $result = json_decode($response, true);
+<body class="container">
+    <div class="jumbotron">
+        <?php 
+            $result = json_decode($response, true);
 
-        if($result["success"]) {
-           echo "Success!";
-         } else {
-            echo "You suck. " . $result["message"];
-         }
-    ?>
-</pre>
+            if($result["success"]) {
+               echo "<h1>Success!</h1>";
+             } else {
+                echo "<h1>Not Success! <br /><small>" . $result["message"] . "</small><h1>";
+             }
+        ?>
+        <form action="index">
+            <button class="btn btn-primary" role="button">Go Back</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>
