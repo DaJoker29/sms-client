@@ -5,7 +5,10 @@
     <title>SMS</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+    <?php 
+        if (file_exists('../.client-id')) { ?>
+            <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+        <?php } ?>
     <script src="script.js"></script>
 </head>
 <body class="container">
@@ -34,7 +37,7 @@
                         <span
                             class="g-signin"
                             data-callback="signinCallback"
-                            data-clientid="299379430818-k9unb6hmd4ioq0odkacr2iba0hsuduc8.apps.googleusercontent.com"
+                            data-clientid="<?php $id = file_get_contents('../.client-id'); echo $id; ?>"
                             data-cookiepolicy="single_host_origin"
                             data-requestvisibleactions="http://schema.org/AddAction"
                             data-scope="https://www.googleapis.com/auth/plus.login https://www.google.com/m8/feeds/">
