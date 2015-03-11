@@ -5,14 +5,55 @@
     <title>SMS</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+    <script src="script.js"></script>
 </head>
 <body class="container">
-    <h1>SMS <small>Because I can</small></h1>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">SMS</a>
+            </div>
+            <p class="navbar-text">
+                <a id="sign-in-link" data-toggle="modal" href="#sign-in" class="navbar-link">Sign in</a>
+            </p>
+        </div>
+    </nav>
+
+    <!-- Sign-in Modal -->
+    <div id="sign-in" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Sign in via...</h4>
+                </div>
+                <div class="modal-body">
+                    <span id="signinButton">
+                        <span
+                            class="g-signin"
+                            data-callback="signinCallback"
+                            data-clientid="299379430818-k9unb6hmd4ioq0odkacr2iba0hsuduc8.apps.googleusercontent.com"
+                            data-cookiepolicy="single_host_origin"
+                            data-requestvisibleactions="http://schema.org/AddAction"
+                            data-scope="https://www.googleapis.com/auth/plus.login https://www.google.com/m8/feeds/">
+                        </span>
+                    </span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Form -->
     <form class="jumbotron form-horizontal" action="send.php" method="post">
         <div class="form-group">
             <label for="number" class="col-sm-2 control-label glyphicon glyphicon-phone"><span class="sr-only">Phone Number</span></label>
             <div class="col-sm-10">
-                <input required class="form-control" name="number" type="text" placeholder="XXX-XXX-XXXX (Dashes optional)">
+                <input required id="number-input" class="form-control" name="number" type="text" placeholder="XXX-XXX-XXXX (Dashes optional)">
             </div>
         </div>
 
